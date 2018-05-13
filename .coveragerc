@@ -1,0 +1,9 @@
+[report]
+omit =
+    .idea/*
+    .vscode/*
+    */migrations/*
+    config/*
+    apps/*/tests/*
+
+show_missing = True
