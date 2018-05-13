@@ -18,8 +18,12 @@ Including another URLconf
 from django.conf.urls import include, url
 from django.contrib import admin
 
-from apps.core.routers import router
 
+from apps.core.routers import router
+from apps.core.viewsets import ContactEmail, DistributorEmail
+
+
+from rest_framework.authtoken import views
 from rest_framework.documentation import include_docs_urls
 
 API_TITLE = "bioservice"
@@ -30,8 +34,14 @@ urlpatterns = [
     url(
         r"^api-auth/",
         include("rest_framework.urls", namespace="rest_framework")),
+    url(r'^api-token-auth/', views.obtain_auth_token),
     url(
         r"^docs/",
         include_docs_urls(title=API_TITLE, description=API_DESCRIPTION)),
     url(r"^api/v1/", include(router.urls, namespace="api_v1")),
+    url(r'^contact-email/$', ContactEmail.as_view(), name='contact-email'),
+    url(
+        r'^distributor-email/$',
+        DistributorEmail.as_view(),
+        name='distributor-email'),
 ]
