@@ -30,6 +30,7 @@ API_TITLE = "bioservice"
 API_DESCRIPTION = "..."
 
 urlpatterns = [
+    url(r'^grappelli/', include('grappelli.urls')),
     url(r"^admin/", admin.site.urls),
     url(
         r"^api-auth/",
