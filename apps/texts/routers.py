@@ -14,6 +14,6 @@ from .viewsets import TestimonyViewSet, TextViewSet
 
 # Create your routers here.
 texts = (
-    (r"testimonials", TestimonyViewSet)
+    (r"testimonials", TestimonyViewSet),
     (r"texts", TextViewSet)
 )
