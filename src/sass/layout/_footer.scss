@@ -1,0 +1,115 @@
+.footer{
+  width: 100%;
+  position: relative;
+  margin: 0;
+  font-weight: 300;
+  transform: translate3d(0px,0,0);
+  transition: transform 0.4s cubic-bezier(0.215, 0.061, 0.355, 1), opacity 0.4s cubic-bezier(0.215, 0.061, 0.355, 1), background 0.4s cubic-bezier(0.215, 0.061, 0.355, 1);
+  &.moveActive{
+    transform: translate3d(-300px,0,0) !important;
+  }
+  .b_top{
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 20px 15px 20px;
+    background-color: #31353d;
+    .nav_social{
+      display: inline-block;
+      *display: inline;
+      margin: 15px auto 0;
+      > li{
+        width: 50px;
+        height: 50px;
+        display: block;
+        float: left;
+        & + li{
+          margin-left: 10px;
+        }
+        a{
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          overflow: hidden;
+          color: #fff;
+          padding: 0;
+          display: block;
+          font-size: 22px;
+          line-height: 53px;
+          text-align: center;
+          position: relative;
+          background-color: #2a2e35;
+          span{
+            position: relative;
+            z-index: 9;
+          }
+          &:after{
+            content: "";
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            height: 0;
+            border-radius: 50%;
+            width: 0;
+            background-color: $colorP1;
+            transition: all .4s;
+          }
+          &:hover, &:focus{
+            &:after{
+              width: 100%;
+              height: 100%;
+              top: 0;
+              left: 0;
+            }
+          }
+        }
+      }
+    }
+    .nav_contact{
+      width: 100%;
+      display: block;
+      > li{
+        width: 100%;
+        float: none;
+        color: #fff;
+        i{
+          color: $colorP1;
+          font-size: 22px;
+        }
+        p{
+          margin: 0;
+          & + p{
+            margin-top: 2px;
+          }
+        }
+        & + li{
+          margin-top: 20px;
+        }
+        &:first-child{
+          i{
+            font-size: 32px;
+          }
+        }
+      }
+    }
+  }
+  .b_bottom{
+    padding: 10px 15px;
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+    letter-spacing: .5px;
+    background-color: #2a2e35;
+    p{
+      margin: 0;
+      .btn-creator{
+        color: $colorP1;
+        background-color: transparent;
+        &:hover, &:focus{
+          background-color: transparent;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,164 @@
+.section-aboutus{
+  .b_top{
+    $h_top: 340px;
+    background: {
+      position: center top;
+      repeat: no-repeat;
+      size: cover;
+    };
+    position: relative;
+    width: 100%;
+    height: $h_top;
+    h1{
+      margin: 0;
+      font-size: 48px;
+      font-weight: 900;
+      display: block;
+      color: #fff;
+      position: relative;
+      &:after{
+        position: absolute;
+        width: 140px;
+        height: 3px;
+        background-color: $colorP1;
+        content: "";
+        bottom: -15px;
+        left: 50%;
+        margin-left: -70px;
+      }
+    }
+    .b_table{
+      width: 100%;
+      display: table;
+      height: $h_top;
+      position: relative;
+      background-color: rgba(0,0,0,.4);
+      .b_cell{
+        display: table-cell;
+        padding-bottom: 25px;//
+        vertical-align: middle;
+        text-align: center;
+      }
+    }
+    @media (min-width: 768px){
+      height: 400px;
+      .b_table{
+        height: 400px;
+      }
+    }
+  }
+  .b_center{
+    color: #434343;
+    text-align: center;
+    font-size: 18px;
+    p{
+      line-height: 28px;
+    }
+    .b_text_conoc{
+      padding: 60px 0;
+      width: 50%;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .ico-img{
+      margin: 0 auto 10px;
+      display: block;
+    }
+    .b_valor{
+      padding: 60px 0;
+      width: 50%;
+      margin: 0 auto;
+      text-align: center;
+    }
+    h2{
+      text-transform: uppercase;
+      margin: 0 0 25px;
+      font-family: "Roboto", serif;
+      font-size: 40px;
+    }
+    .b_mivi{
+      $hmivi: 360px;
+      height: $hmivi;
+      position: relative;
+      color: #fff;
+      .b_table{
+        width: 100%;
+        display: table;
+        height: $hmivi;
+        position: relative;
+        .b_cell{
+          display: table-cell;
+          padding-bottom: 25px;//
+          vertical-align: middle;
+          text-align: center;
+        }
+      }
+      .b_left{
+        width: 50%;
+        height: $hmivi;
+        float: left;
+        background-color: $colorP1;
+      }
+      .b_right{
+        width: 50%;
+        height: $hmivi;
+        float: left;
+        background-color: $colorS1;
+      }
+      .b_text{
+        width: 80%;
+        margin: 0 auto;
+      }
+    }
+  }
+  .b_message{
+    width: 100%;
+    height: 450px;
+    position: relative;
+    background: {
+      position: center;
+      repeat: no-repeat;
+      size: cover;
+      attachment: fixed;
+    };
+    .b_table{
+      position: relative;
+      background-color: rgba(0,0,0,.5);
+      display: table;
+      width: 100%;
+      height: 450px;
+      .b_cell{
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
+        color: #fff;
+        font-style: italic;
+      }
+    }
+    .b_text{
+      width: 70%;
+      margin: 0 auto;
+      font-weight: 700;
+      font-size: 26px;
+      span{
+
+      }
+      .btn-viewmore{
+        position: relative;
+        display: inline-block;
+        *display: inline;
+        background-color: transparent;
+        color: #fff;
+        margin-top: 10px;
+        border: 1px solid #fff;
+        padding: 8px 20px;
+        transition: .4s all ease;
+        &:hover, &:focus{
+          background-color: #fff;
+          color: #222;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}

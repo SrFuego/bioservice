@@ -1,0 +1,195 @@
+.section_index{
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  .bg_black{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    z-index: 9;
+    left: 0;
+    background-color: rgba(49, 53, 61, 0.8);
+  }
+  .bg_image{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 5;
+    left: 0;
+    background: {
+      image: url(/static/img/head_index.jpg);
+      size: cover;
+      repeat: no-repeat;
+      position: center;
+    }
+  }
+  .bx-wrapper{
+    width: 100% !important;
+    height: 100% !important;
+    position: absolute;
+  }
+  .bx_index{
+    padding: 0;
+    width: 100% !important;
+    position: relative;
+    height: 100% !important;
+    > li{
+      width: 100% !important;
+      height: 100vh;
+      position: relative;
+      .bg_slider{
+        width: 100% !important;
+        height: 100vh;
+        position: absolute;
+        background:{
+          position: center;
+          size: cover;
+          repeat: no-repeat;
+        }
+      }
+    }
+  }
+  .b_top{
+    width: 100%;
+    position: absolute;
+    z-index: 20;
+    top: 75px;
+    left: 0;
+    .logo_index{
+      width: 450px;
+      display: block;
+      margin: 0 auto;
+      border-radius: 30px;
+    }
+  }
+  .b_table{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 20;
+    display: table;
+    .b_cell{
+      width: 100%;
+      text-align: center;
+      vertical-align: middle;
+      display: table-cell;
+      color: #fff;
+      h5{
+        margin: 0 0 20px;
+        font-size: 30px;
+        font-weight: 200;
+      }
+      .btn_go{
+        display: block;
+        width: 100%;
+        margin-top: 60px;
+        text-align: center;
+        .nav_links{
+          display: inline-block;
+          *display: inline;
+          > li{
+            float: left;
+            .btn-language{
+              position: relative;
+              padding: 8px 0;
+              font-size: 18px;
+              width: 160px;
+              color: #fff;
+              border: 1px solid #fff;
+              background-color: transparent;
+              transition: all .8s ease;
+              &:after{
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                width: 0;
+                height: 0;
+                background-color: $color-green;
+                content: "";
+                transition: all .2s ease-in;
+              }
+              /*&:before{
+                position: absolute;
+                right: 50%;
+                width: 0;
+                height: 100%;
+                background-color: $colorP1;
+                content: "";
+                top: 0;
+                transition: width .2s ease-in;
+              }*/
+              span{
+                display: block;
+                position: relative;
+                z-index: 5;
+              }
+              &:hover, &:focus{
+                overflow: hidden;
+                text-decoration: none;
+                outline: 0;
+                border-color: $color-green;
+                &:after, &:before{
+                  width: 100%;
+                  left: 0;
+                  top: 0;
+                  height: 100%;
+                }
+              }
+            }
+            & + li{
+              margin-left: 15px;
+            }
+          }
+        }
+      }
+    } 
+  }
+  .b_address{
+    position: absolute;
+    bottom: 15px;
+    width: 100%;
+    z-index: 35;
+    height: auto;
+    color: #fff;
+    text-align: center;
+    .nav_socials{
+      display: inline-block;
+      *display: inline;
+      $hico: 30px;
+      margin-bottom: 15px;
+      > li{
+        float: left;
+        width: $hico;
+        height: $hico;
+        a{
+          width: 100%;
+          display: block;
+          color: #fff;
+          padding: 0;
+          font-size: 26px;
+          height: $hico;
+          line-height: $hico;
+          overflow: hidden;
+          transition: all 0.3s ease-in-out;
+          &:hover,&:focus{
+            outline: 0;
+            background-color: transparent;
+            transform: rotate(360deg);
+          }
+        }
+        & + li{
+          margin-left: 15px;
+        }
+      }
+    }
+    p{
+      //letter-spacing: 1px;
+      font-size: 13px;
+      margin: 0;
+    }
+  }
+}

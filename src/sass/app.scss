@@ -1,0 +1,21 @@
+// @import 'https://fonts.googleapis.com/css?family=Lalezar';
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700,900');
+@import url('https://fonts.googleapis.com/css?family=Anton');
+
+@import './base/animate';
+@import './base/colors';
+@import './base/mixins';
+
+@import './layout/header';
+@import './layout/footer';
+
+@import './pages/language';
+@import './pages/home';
+@import './pages/about';
+@import './pages/contact';
+@import './pages/products';
+@import './pages/services';
+
+@import './vendors/bootstrap';
+@import './vendors/font-awesome';
+@import './vendors/bxslider';
