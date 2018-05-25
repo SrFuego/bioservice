@@ -60,10 +60,14 @@
     top: 75px;
     left: 0;
     .logo_index{
-      width: 450px;
+      width: 300px;
       display: block;
       margin: 0 auto;
-      border-radius: 30px;
+      @include borderRadius(20px);
+      @media (min-width: 768px) {
+        width: 450px;
+        @include borderRadius(30px);
+      }
     }
   }
   .b_table{

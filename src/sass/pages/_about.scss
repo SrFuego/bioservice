@@ -1,52 +1,4 @@
-.section-aboutus{
-  .b_top{
-    $h_top: 340px;
-    background: {
-      position: center top;
-      repeat: no-repeat;
-      size: cover;
-    };
-    position: relative;
-    width: 100%;
-    height: $h_top;
-    h1{
-      margin: 0;
-      font-size: 48px;
-      font-weight: 900;
-      display: block;
-      color: #fff;
-      position: relative;
-      &:after{
-        position: absolute;
-        width: 140px;
-        height: 3px;
-        background-color: $colorP1;
-        content: "";
-        bottom: -15px;
-        left: 50%;
-        margin-left: -70px;
-      }
-    }
-    .b_table{
-      width: 100%;
-      display: table;
-      height: $h_top;
-      position: relative;
-      background-color: rgba(0,0,0,.4);
-      .b_cell{
-        display: table-cell;
-        padding-bottom: 25px;//
-        vertical-align: middle;
-        text-align: center;
-      }
-    }
-    @media (min-width: 768px){
-      height: 400px;
-      .b_table{
-        height: 400px;
-      }
-    }
-  }
+.section-about{
   .b_center{
     color: #434343;
     text-align: center;
@@ -77,14 +29,13 @@
       font-size: 40px;
     }
     .b_mivi{
-      $hmivi: 360px;
-      height: $hmivi;
+      min-height: 250px;
       position: relative;
       color: #fff;
       .b_table{
         width: 100%;
         display: table;
-        height: $hmivi;
+        height: auto;
         position: relative;
         .b_cell{
           display: table-cell;
@@ -94,20 +45,35 @@
         }
       }
       .b_left{
-        width: 50%;
-        height: $hmivi;
-        float: left;
+        width: 100%;
+        height: 250px;
         background-color: $colorP1;
       }
       .b_right{
-        width: 50%;
-        height: $hmivi;
-        float: left;
+        width: 100%;
+        height: 250px;
         background-color: $colorS1;
       }
       .b_text{
         width: 80%;
         margin: 0 auto;
+      }
+      @media (min-width: 768px) {
+        $hmivi: 360px;
+        height: $hmivi;
+        .b_table{
+          height: $hmivi;
+        }
+        .b_left{
+          width: 50%;
+          float: left;
+          height: $hmivi;
+        }
+        .b_right{
+          width: 50%;
+          float: left;
+          height: $hmivi;
+        }
       }
     }
   }

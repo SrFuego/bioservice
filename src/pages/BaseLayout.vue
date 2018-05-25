@@ -2,8 +2,11 @@
 <div>
   <header class="header">
     <div class="container">
+      <div class="bio-menu" :class="{'active': activeMenu}" @click="activeMenu = !activeMenu"> 
+        <span class="hamburger"></span>
+      </div>
       <div class="b_left">
-        <router-link :to="{name: 'language'}">
+        <router-link class="link-logo" :to="{name: 'language'}">
           <img class="logo" src="/static/img/logo_old.jpg">
         </router-link>
       </div>
@@ -11,30 +14,59 @@
         <ul class="nav nav_bio">
           <li>
             <router-link :to="{name: 'inicio'}">
-              <span>INICIO</span>
+              <span>Inicio</span>
             </router-link>
           </li>
           <li>
             <router-link :to="{name: 'nosotros'}">
-              <span>NOSOTROS</span>
+              <span>Nosotros</span>
             </router-link>
           </li>
           <li>
             <router-link :to="{name: 'productos'}">
-              <span>PRODUCTOS</span>
+              <span>Productos</span>
             </router-link>
           </li>
           <li>
             <router-link :to="{name: 'servicios'}">
-              <span>SERVICIOS</span>
+              <span>Servicios</span>
             </router-link>
           </li>
           <li>
             <router-link :to="{name: 'contacto'}">
-              <span>CONTACTO</span>
+              <span>Contacto</span>
             </router-link>
           </li>
         </ul>
+      </div>
+      <div class="mobile-menu" v-show="activeMenu">
+        <ul id="menu-header" class="nav menu clearfix">
+          <li>
+            <router-link :to="{name: 'inicio'}">
+              <span>Inicio</span>
+            </router-link>
+          </li>
+          <li>
+            <router-link :to="{name: 'nosotros'}">
+              <span>Nosotros</span>
+            </router-link>
+          </li>
+          <li>
+            <router-link :to="{name: 'productos'}">
+              <span>Productos</span>
+            </router-link>
+          </li>
+          <li>
+            <router-link :to="{name: 'servicios'}">
+              <span>Servicios</span>
+            </router-link>
+          </li>
+          <li>
+            <router-link :to="{name: 'contacto'}">
+              <span>Contacto</span>
+            </router-link>
+          </li>
+        </ul>			
       </div>
     </div>
   </header>
@@ -90,6 +122,7 @@
     mixins: [mixinsGlobals],
     data () {
       return {
+        activeMenu: false,
         flagNav: false
       }
     }

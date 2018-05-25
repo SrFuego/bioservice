@@ -1,52 +1,4 @@
 .section-contact{
-  .b_top{
-    $h_top: 340px;
-    background: {
-      position: center top;
-      repeat: no-repeat;
-      size: cover;
-    };
-    position: relative;
-    width: 100%;
-    height: $h_top;
-    h1{
-      margin: 0;
-      font-size: 48px;
-      font-weight: 900;
-      display: block;
-      color: #fff;
-      position: relative;
-      &:after{
-        position: absolute;
-        width: 140px;
-        height: 3px;
-        background-color: $colorP1;
-        content: "";
-        bottom: -15px;
-        left: 50%;
-        margin-left: -70px;
-      }
-    }
-    .b_table{
-      width: 100%;
-      display: table;
-      height: $h_top;
-      position: relative;
-      background-color: rgba(0,0,0,.4);
-      .b_cell{
-        display: table-cell;
-        padding-bottom: 25px;//
-        vertical-align: middle;
-        text-align: center;
-      }
-    }
-    @media (min-width: 768px){
-      height: 440px;
-      .b_table{
-        height: 440px;
-      }
-    }
-  }
   .b_center{
     position: relative;
     width: 100%;
@@ -61,10 +13,13 @@
     .b_form{
       padding: 0;
       width: 100%;
-      padding: 25px;
+      padding: 10px;
       border-radius: 8px;
-      box-shadow: 0 5px 5px rgba(0,0,0,.25);
+      box-shadow: 0 2px 9px rgba(0,0,0,.25);
       background-color: #fff;
+      @media (min-width: 768px) {
+        padding: 25px;
+      }
       &.form-left{
         float: left;
         text-align: left;

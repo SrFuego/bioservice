@@ -1,7 +1,7 @@
 <template>
 <div>
   <div class="section-services">
-    <div class="b_top" style="background-image: url(/static/img/banner_service.jpg)">
+    <div class="section__banner" style="background-image: url(/static/img/banner_service.jpg)">
       <div class="b_table">
         <div class="b_cell">
           <h1>{{ (lang=='es')? 'SERVICIOS' : 'SERVICES' }}</h1>

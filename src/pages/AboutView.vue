@@ -1,7 +1,7 @@
 <template>
 <div>
-  <div class="section-aboutus">
-    <div class="b_top" style="background-image: url(/static/img/banner_us.jpg)">
+  <div class="section-about">
+    <div class="section__banner" style="background-image: url(/static/img/banner_us.jpg)">
       <div class="b_table">
         <div class="b_cell">
           <h1>{{ (lang=='es')? 'NOSOTROS' : 'ABOUT US' }}</h1>

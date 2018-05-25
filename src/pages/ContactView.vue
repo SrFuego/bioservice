@@ -1,7 +1,7 @@
 <template>
 <div>
   <div class="section-contact">
-    <div class="b_top" style="background-image: url(/static/img/banner_contact.jpg)">
+    <div class="section__banner" style="background-image: url(/static/img/banner_contact.jpg)">
       <div class="b_table">
         <div class="b_cell">
           <h1>{{ (lang=='es')? 'CONTACTO' : 'CONTACT' }}</h1>
