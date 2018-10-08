@@ -47,10 +47,10 @@ class CategorySerializer(serializers.HyperlinkedModelSerializer):
 class ProductSerializer(serializers.ModelSerializer):
     image_1 = serializers.CharField(source="image_1.url")
     image_1_thumbnail = serializers.CharField(source="image_1.thumbnail.url")
-    image_2 = serializers.CharField(source="image_2.url")
-    image_2_thumbnail = serializers.CharField(source="image_2.thumbnail.url")
-    image_3 = serializers.CharField(source="image_3.url")
-    image_3_thumbnail = serializers.CharField(source="image_3.thumbnail.url")
+    image_2 = serializers.SerializerMethodField(required=False)
+    image_2_thumbnail = serializers.SerializerMethodField(required=False)
+    image_3 = serializers.SerializerMethodField(required=False)
+    image_3_thumbnail = serializers.SerializerMethodField(required=False)
     slug = serializers.SlugField(read_only=True)
     subcategory = serializers.SlugRelatedField(
         read_only=True, slug_field="slug")
@@ -63,3 +63,27 @@ class ProductSerializer(serializers.ModelSerializer):
             "image_2_thumbnail", "image_3", "image_3_thumbnail", "slug",)
         lookup_field = "slug"
         extra_kwargs = {"url": {"lookup_field": "slug"}}
+
+    def get_image_2(self, obj):
+        try:
+            return obj.image_2.url
+        except:
+            return None
+
+    def get_image_2_thumbnail(self, obj):
+        try:
+            return obj.image_2.thumbnail.url
+        except:
+            return None
+
+    def get_image_3(self, obj):
+        try:
+            return obj.image_3.url
+        except:
+            return None
+
+    def get_image_3_thumbnail(self, obj):
+        try:
+            return obj.image_3.thumbnail.url
+        except:
+            return None
